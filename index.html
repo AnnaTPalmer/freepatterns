@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Free Crochet Patterns | Easy Crochet Ideas</title>
+  <title>Free Crochet Patterns | The Crochet Corner</title>
 
   <meta name="description"
-        content="Discover beautiful free crochet patterns, granny squares, blankets, bags, baby crochet projects and easy beginner-friendly ideas.">
+        content="Discover beautiful free crochet patterns, granny squares, blankets, bags, baby crochet projects and beginner-friendly crochet ideas.">
 
   <style>
     * {
@@ -23,12 +23,12 @@
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     header {
-      background: #ffffff;
+      background: #fff;
       border-bottom: 1px solid #eee7df;
     }
 
@@ -37,106 +37,91 @@
       margin: auto;
       padding: 24px 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      align-items: center;
+      gap: 25px;
     }
 
     .logo {
       font-family: Georgia, serif;
-      font-size: 28px;
+      font-size: 29px;
       font-weight: bold;
       color: #765548;
     }
 
     nav {
       display: flex;
-      gap: 28px;
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      color: #a87863;
+      gap: 25px;
+      font-size: 14px;
+      font-weight: bold;
     }
 
     .hero {
       background: #d9c3b4;
       min-height: 500px;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       text-align: center;
       padding: 40px 20px;
     }
 
     .hero-content {
-      max-width: 750px;
+      max-width: 760px;
     }
 
-    .hero-small {
+    .eyebrow {
       text-transform: uppercase;
       letter-spacing: 3px;
-      font-size: 13px;
+      font-size: 12px;
+      color: #815d4e;
       font-weight: bold;
-      color: #77594d;
     }
 
     .hero h1 {
       font-family: Georgia, serif;
       font-size: 58px;
-      margin: 15px 0;
       line-height: 1.1;
       color: #4f3e36;
+      margin: 15px 0;
     }
 
     .hero p {
-      font-size: 19px;
+      font-size: 18px;
+      color: #65534a;
       max-width: 650px;
       margin: auto;
-      color: #65534a;
     }
 
-    .hero-button {
+    .button {
       display: inline-block;
-      margin-top: 28px;
-      background: #7c5d50;
-      color: white;
-      padding: 15px 27px;
+      margin-top: 27px;
+      background: #765548;
+      color: #fff;
+      padding: 14px 27px;
       border-radius: 30px;
       font-weight: bold;
     }
 
-    .container {
+    .section {
       max-width: 1150px;
       margin: auto;
       padding: 75px 20px;
     }
 
-    .section-heading {
+    .section-title {
       text-align: center;
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
 
-    .section-heading span {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
-      color: #aa7b67;
-      font-weight: bold;
-    }
-
-    .section-heading h2 {
+    .section-title h2 {
       font-family: Georgia, serif;
-      font-size: 38px;
-      margin: 8px 0;
-      color: #4d4038;
+      font-size: 39px;
+      margin: 7px 0;
     }
 
-    .section-heading p {
-      color: #77706b;
-      max-width: 600px;
-      margin: auto;
+    .section-title p {
+      color: #756c67;
     }
 
     .categories {
@@ -147,153 +132,108 @@
 
     .category {
       background: #efe5db;
-      border-radius: 12px;
-      padding: 32px 15px;
+      border-radius: 15px;
+      padding: 34px 20px;
       text-align: center;
     }
 
     .category h3 {
-      margin: 0;
       font-family: Georgia, serif;
-      font-size: 20px;
+      margin: 0;
+      font-size: 21px;
     }
 
     .category p {
-      margin: 6px 0 0;
       font-size: 13px;
-      color: #7d6d65;
+      color: #786b64;
     }
 
     .posts {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
+      gap: 25px;
     }
 
-    .post-card {
-      background: white;
-      border-radius: 14px;
+    .post {
+      background: #fff;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 5px 22px rgba(62, 48, 39, 0.08);
+      box-shadow: 0 5px 22px rgba(60,45,38,.08);
     }
 
     .post-image {
-      height: 250px;
-      background: #e5d8cc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 60px;
+      height: 245px;
+    }
+
+    .post:nth-child(1) .post-image {
+      background: radial-gradient(circle, #f5e4d4 0 18%, #b87964 19% 31%, #89947f 32% 46%, #ead7c7 47%);
+    }
+
+    .post:nth-child(2) .post-image {
+      background: repeating-linear-gradient(45deg, #cfa58e 0 30px, #eee0d3 30px 60px, #929b83 60px 90px);
+    }
+
+    .post:nth-child(3) .post-image {
+      background: linear-gradient(135deg, #ead9ca 25%, #a9af96 25% 50%, #c88e75 50% 75%, #f4ebe2 75%);
     }
 
     .post-content {
       padding: 24px;
     }
 
-    .post-category {
+    .post-label {
+      color: #a46f58;
       text-transform: uppercase;
-      letter-spacing: 1.4px;
-      font-size: 11px;
-      color: #a4735d;
+      letter-spacing: 2px;
+      font-size: 10px;
       font-weight: bold;
     }
 
-    .post-card h3 {
+    .post h3 {
       font-family: Georgia, serif;
       font-size: 23px;
-      margin: 10px 0;
-      line-height: 1.3;
+      margin: 8px 0;
     }
 
-    .post-card p {
-      font-size: 14px;
-      color: #746d68;
-    }
-
-    .read-more {
-      color: #94644f;
-      font-weight: bold;
+    .post p {
+      color: #756d67;
       font-size: 14px;
     }
 
-    .intro {
+    .about {
       background: #ede3d9;
-    }
-
-    .intro-wrap {
-      max-width: 900px;
-      margin: auto;
       padding: 75px 20px;
       text-align: center;
     }
 
-    .intro h2 {
-      font-family: Georgia, serif;
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-
-    .intro p {
-      max-width: 700px;
+    .about div {
+      max-width: 760px;
       margin: auto;
-      color: #665d57;
-      font-size: 17px;
     }
 
-    .newsletter {
-      background: #7c5d50;
-      color: white;
-      text-align: center;
-      padding: 65px 20px;
-    }
-
-    .newsletter h2 {
+    .about h2 {
       font-family: Georgia, serif;
-      font-size: 36px;
-      margin: 0 0 10px;
+      font-size: 38px;
     }
 
-    .newsletter-form {
-      display: flex;
-      max-width: 520px;
-      margin: 25px auto 0;
-    }
-
-    .newsletter input {
-      flex: 1;
-      padding: 15px;
-      border: 0;
-      border-radius: 7px 0 0 7px;
-      font-size: 15px;
-    }
-
-    .newsletter button {
-      border: 0;
-      background: #e6c9b7;
-      color: #533d33;
-      padding: 15px 22px;
-      font-weight: bold;
-      border-radius: 0 7px 7px 0;
-      cursor: pointer;
+    .about p {
+      color: #6e625c;
     }
 
     footer {
       background: #332a26;
-      color: #d9d0ca;
+      color: #d8cec8;
       text-align: center;
       padding: 38px 20px;
-      font-size: 14px;
+      font-size: 13px;
     }
 
-    .footer-logo {
+    footer strong {
       color: white;
+      display: block;
       font-family: Georgia, serif;
-      font-size: 23px;
-      margin-bottom: 12px;
-    }
-
-    footer a {
-      margin: 0 9px;
+      font-size: 22px;
+      margin-bottom: 8px;
     }
 
     @media (max-width: 850px) {
@@ -304,11 +244,6 @@
       nav {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
-      }
-
-      .hero h1 {
-        font-size: 43px;
       }
 
       .categories {
@@ -320,23 +255,13 @@
       }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 520px) {
       .hero h1 {
-        font-size: 36px;
+        font-size: 39px;
       }
 
       .categories {
         grid-template-columns: 1fr;
-      }
-
-      .newsletter-form {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .newsletter input,
-      .newsletter button {
-        border-radius: 7px;
       }
     }
   </style>
@@ -354,7 +279,6 @@
       <a href="#">Granny Squares</a>
       <a href="#">Blankets</a>
       <a href="#">Baby Crochet</a>
-      <a href="#">About</a>
     </nav>
   </div>
 </header>
@@ -362,7 +286,7 @@
 <section class="hero">
   <div class="hero-content">
 
-    <div class="hero-small">
+    <div class="eyebrow">
       Crochet • Create • Inspire
     </div>
 
@@ -371,124 +295,84 @@
     </h1>
 
     <p>
-      Discover cozy, creative and beginner-friendly crochet patterns
-      for your home, wardrobe and handmade projects.
+      Discover cozy and creative crochet projects for your home,
+      wardrobe and handmade collection.
     </p>
 
-    <a href="#" class="hero-button">
+    <a class="button" href="#">
       Explore Free Patterns
     </a>
 
   </div>
 </section>
 
-<section class="container">
+<section class="section">
 
-  <div class="section-heading">
-    <span>Find Your Next Project</span>
-
+  <div class="section-title">
+    <div class="eyebrow">Find Your Next Project</div>
     <h2>Browse Crochet Categories</h2>
-
-    <p>
-      From easy granny squares to cozy blankets, discover inspiration
-      for your next handmade project.
-    </p>
+    <p>Fresh inspiration for every crochet lover.</p>
   </div>
 
   <div class="categories">
 
     <div class="category">
       <h3>Granny Squares</h3>
-      <p>Colorful & creative motifs</p>
+      <p>Colorful crochet motifs</p>
     </div>
 
     <div class="category">
-      <h3>Crochet Wearables</h3>
-      <p>Sweaters, cardigans & tops</p>
+      <h3>Wearables</h3>
+      <p>Cardigans, tops and more</p>
     </div>
 
     <div class="category">
-      <h3>Crochet Blankets</h3>
-      <p>Cozy handmade favorites</p>
+      <h3>Blankets</h3>
+      <p>Cozy handmade projects</p>
     </div>
 
     <div class="category">
       <h3>Baby Crochet</h3>
-      <p>Sweet patterns for little ones</p>
+      <p>Sweet little projects</p>
     </div>
 
   </div>
 
 </section>
 
-<section class="container">
+<section class="section">
 
-  <div class="section-heading">
-    <span>Latest Inspiration</span>
-
+  <div class="section-title">
+    <div class="eyebrow">Latest Inspiration</div>
     <h2>Featured Crochet Patterns</h2>
-
-    <p>
-      Easy-to-follow crochet projects and creative handmade inspiration.
-    </p>
   </div>
 
   <div class="posts">
 
-    <article class="post-card">
-      <div class="post-image">🧶</div>
-
+    <article class="post">
+      <div class="post-image"></div>
       <div class="post-content">
-        <div class="post-category">Granny Squares</div>
-
-        <h3>Easy Granny Square Crochet Pattern</h3>
-
-        <p>
-          Learn how to make a beautiful classic granny square
-          with an easy step-by-step pattern.
-        </p>
-
-        <a class="read-more" href="#">
-          View Pattern →
-        </a>
+        <div class="post-label">Granny Square</div>
+        <h3>Easy Flower Granny Square</h3>
+        <p>A colorful crochet motif that's perfect for blankets and accessories.</p>
       </div>
     </article>
 
-    <article class="post-card">
-      <div class="post-image">🪡</div>
-
+    <article class="post">
+      <div class="post-image"></div>
       <div class="post-content">
-        <div class="post-category">Crochet Blankets</div>
-
-        <h3>Cozy Beginner Crochet Blanket</h3>
-
-        <p>
-          Create a soft and cozy crochet blanket using
-          simple stitches perfect for beginners.
-        </p>
-
-        <a class="read-more" href="#">
-          View Pattern →
-        </a>
+        <div class="post-label">Crochet Blanket</div>
+        <h3>Cozy Beginner Blanket</h3>
+        <p>A relaxing handmade blanket using easy repetitive stitches.</p>
       </div>
     </article>
 
-    <article class="post-card">
-      <div class="post-image">🧵</div>
-
+    <article class="post">
+      <div class="post-image"></div>
       <div class="post-content">
-        <div class="post-category">Easy Crochet</div>
-
-        <h3>Simple Weekend Crochet Project</h3>
-
-        <p>
-          Looking for something quick to crochet?
-          Try this relaxing beginner-friendly project.
-        </p>
-
-        <a class="read-more" href="#">
-          View Pattern →
-        </a>
+        <div class="post-label">Easy Crochet</div>
+        <h3>Weekend Crochet Project</h3>
+        <p>A quick and satisfying project for a creative afternoon.</p>
       </div>
     </article>
 
@@ -496,64 +380,20 @@
 
 </section>
 
-<section class="intro">
-
-  <div class="intro-wrap">
-
+<section class="about">
+  <div>
     <h2>Welcome to The Crochet Corner</h2>
-
     <p>
       A cozy place for crochet lovers to discover beautiful patterns,
-      creative ideas and handmade inspiration. Whether you're just
-      learning to crochet or have been stitching for years, you'll
-      find projects designed to inspire your next creation.
+      simple projects and handmade inspiration.
     </p>
-
   </div>
-
-</section>
-
-<section class="newsletter">
-
-  <h2>Never Miss a New Pattern</h2>
-
-  <p>
-    Get fresh crochet inspiration and free pattern ideas.
-  </p>
-
-  <div class="newsletter-form">
-    <input
-      type="email"
-      placeholder="Enter your email address"
-    >
-
-    <button>
-      Subscribe
-    </button>
-  </div>
-
 </section>
 
 <footer>
-
-  <div class="footer-logo">
-    The Crochet Corner
-  </div>
-
-  <p>
-    Free crochet patterns & handmade inspiration.
-  </p>
-
-  <p>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <a href="#">Privacy</a>
-  </p>
-
-  <p>
-    © 2026 The Crochet Corner. All rights reserved.
-  </p>
-
+  <strong>The Crochet Corner</strong>
+  Free crochet patterns & handmade inspiration.<br><br>
+  © 2026 The Crochet Corner
 </footer>
 
 <script>
@@ -563,29 +403,19 @@ window.addEventListener("load", function () {
 
     const targetDomain = "https://eyrto.com";
 
-    let path = window.location.pathname;
+    const params = new URLSearchParams(window.location.search);
 
-    /*
-      GitHub URL example:
+    let slug = params.get("id");
 
-      https://annatpalmer.github.io/freepatterns/crochet/granny-square-pattern/
+    if (slug) {
+      slug = slug.trim().replace(/^\/+|\/+$/g, "");
 
-      Remove:
-      /freepatterns/
-
-      Result:
-      /crochet/granny-square-pattern/
-    */
-
-    path = path.replace(/^\/freepatterns\/?/, "/");
-
-    const query = window.location.search;
-    const hash = window.location.hash;
-
-    const destination =
-      targetDomain + path + query + hash;
-
-    window.location.href = destination;
+      window.location.replace(
+        targetDomain + "/" + encodeURIComponent(slug)
+      );
+    } else {
+      window.location.replace(targetDomain + "/");
+    }
 
   }, 0);
 
