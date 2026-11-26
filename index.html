@@ -3,87 +3,675 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Crochet Patterns</title>
-  <meta name="description" content="Discover beautiful free crochet patterns, beginner-friendly projects, granny squares, blankets, bags and more.">
+
+  <title>Free Crochet Patterns | Easy Crochet Ideas</title>
+
+  <meta name="description"
+        content="Discover beautiful free crochet patterns, granny squares, blankets, bags, baby crochet projects and easy beginner-friendly ideas.">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f8f3ed;
-      color: #3f342d;
       margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fbf8f4;
+      color: #3f3832;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #eee7df;
+    }
+
+    .topbar {
+      max-width: 1150px;
+      margin: auto;
+      padding: 24px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 28px;
+      font-weight: bold;
+      color: #765548;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #a87863;
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        linear-gradient(
+          rgba(73, 55, 45, 0.28),
+          rgba(73, 55, 45, 0.28)
+        ),
+        url("https://images.unsplash.com/photo-1603481546238-487240415921?auto=format&fit=crop&w=1600&q=85");
+
+      background-size: cover;
+      background-position: center;
+      min-height: 520px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      padding: 40px 20px;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .hero-small {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: 58px;
+      margin: 15px 0;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin-top: 28px;
+      background: #ffffff;
+      color: #725448;
+      padding: 15px 27px;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    .hero-button:hover {
+      background: #f4ece5;
+    }
+
+    /* SECTIONS */
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 75px 20px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-heading span {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      color: #aa7b67;
+      font-weight: bold;
+    }
+
+    .section-heading h2 {
+      font-family: Georgia, serif;
+      font-size: 38px;
+      margin: 8px 0;
+      color: #4d4038;
+    }
+
+    .section-heading p {
+      color: #77706b;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* CATEGORIES */
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .category {
+      background: #efe5db;
+      border-radius: 12px;
+      padding: 32px 15px;
+      text-align: center;
+      transition: 0.25s;
+    }
+
+    .category:hover {
+      transform: translateY(-4px);
+      background: #e8d9cc;
+    }
+
+    .category h3 {
+      margin: 0;
+      font-family: Georgia, serif;
+      font-size: 20px;
+    }
+
+    .category p {
+      margin: 6px 0 0;
+      font-size: 13px;
+      color: #7d6d65;
+    }
+
+    /* FEATURED POSTS */
+
+    .posts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .post-card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 22px rgba(62, 48, 39, 0.08);
+      transition: 0.25s;
+    }
+
+    .post-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .post-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .post-content {
+      padding: 24px;
+    }
+
+    .post-category {
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 11px;
+      color: #a4735d;
+      font-weight: bold;
+    }
+
+    .post-card h3 {
+      font-family: Georgia, serif;
+      font-size: 23px;
+      margin: 10px 0;
+      line-height: 1.3;
+    }
+
+    .post-card p {
+      font-size: 14px;
+      color: #746d68;
+    }
+
+    .read-more {
+      color: #94644f;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* INTRO */
+
+    .intro {
+      background: #ede3d9;
+    }
+
+    .intro-wrap {
+      max-width: 900px;
+      margin: auto;
+      padding: 75px 20px;
       text-align: center;
     }
 
-    header {
-      background: #d8b9a7;
-      padding: 60px 20px;
+    .intro h2 {
+      font-family: Georgia, serif;
+      font-size: 40px;
+      margin-bottom: 15px;
     }
 
-    h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+    .intro p {
+      max-width: 700px;
+      margin: auto;
+      color: #665d57;
+      font-size: 17px;
     }
 
-    main {
-      max-width: 750px;
-      margin: 50px auto;
-      padding: 20px;
-    }
+    /* NEWSLETTER */
 
-    .card {
-      background: white;
-      padding: 35px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 25px;
-      background: #9c6f5c;
+    .newsletter {
+      background: #7c5d50;
       color: white;
-      text-decoration: none;
-      border-radius: 8px;
+      text-align: center;
+      padding: 65px 20px;
     }
+
+    .newsletter h2 {
+      font-family: Georgia, serif;
+      font-size: 36px;
+      margin: 0 0 10px;
+    }
+
+    .newsletter p {
+      margin-bottom: 25px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      max-width: 520px;
+      margin: auto;
+    }
+
+    .newsletter input {
+      flex: 1;
+      padding: 15px;
+      border: 0;
+      border-radius: 7px 0 0 7px;
+      font-size: 15px;
+    }
+
+    .newsletter button {
+      border: 0;
+      background: #e6c9b7;
+      color: #533d33;
+      padding: 15px 22px;
+      font-weight: bold;
+      border-radius: 0 7px 7px 0;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
 
     footer {
-      margin-top: 50px;
-      padding: 25px;
+      background: #332a26;
+      color: #d9d0ca;
+      text-align: center;
+      padding: 38px 20px;
       font-size: 14px;
     }
+
+    footer .footer-logo {
+      color: white;
+      font-family: Georgia, serif;
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    footer a {
+      margin: 0 9px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      .topbar {
+        flex-direction: column;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .categories {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .posts {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (max-width: 500px) {
+
+      .hero {
+        min-height: 450px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .categories {
+        grid-template-columns: 1fr;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .newsletter input,
+      .newsletter button {
+        border-radius: 7px;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
+
 <header>
-  <h1>Free Crochet Patterns</h1>
-  <p>Beautiful crochet inspiration for every skill level.</p>
+
+  <div class="topbar">
+
+    <div class="logo">
+      The Crochet Corner
+    </div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Free Patterns</a>
+      <a href="#">Granny Squares</a>
+      <a href="#">Blankets</a>
+      <a href="#">Baby Crochet</a>
+      <a href="#">About</a>
+    </nav>
+
+  </div>
+
 </header>
 
-<main>
-  <div class="card">
-    <h2>Welcome Crochet Lovers 🧶</h2>
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-small">
+      Crochet • Create • Inspire
+    </div>
+
+    <h1>
+      Beautiful Crochet Patterns Made Simple
+    </h1>
 
     <p>
-      Explore easy and beautiful crochet projects including granny squares,
-      blankets, bags, home decor and wearable crochet patterns.
+      Discover cozy, creative and beginner-friendly crochet patterns
+      for your home, wardrobe and handmade gifts.
     </p>
 
-    <p>
-      Whether you're a beginner or an experienced crocheter,
-      there's always something new to make.
-    </p>
+    <a href="#patterns" class="hero-button">
+      Explore Free Patterns
+    </a>
 
-    <a class="button" href="#">Explore Crochet Patterns</a>
   </div>
-</main>
+
+</section>
+
+
+<section class="container">
+
+  <div class="section-heading">
+
+    <span>Find Your Next Project</span>
+
+    <h2>Browse Crochet Categories</h2>
+
+    <p>
+      From easy granny squares to cozy blankets, discover inspiration
+      for your next handmade project.
+    </p>
+
+  </div>
+
+
+  <div class="categories">
+
+    <a href="#" class="category">
+      <h3>Granny Squares</h3>
+      <p>Colorful & creative motifs</p>
+    </a>
+
+    <a href="#" class="category">
+      <h3>Crochet Wearables</h3>
+      <p>Sweaters, cardigans & tops</p>
+    </a>
+
+    <a href="#" class="category">
+      <h3>Crochet Blankets</h3>
+      <p>Cozy handmade favorites</p>
+    </a>
+
+    <a href="#" class="category">
+      <h3>Baby Crochet</h3>
+      <p>Sweet patterns for little ones</p>
+    </a>
+
+  </div>
+
+</section>
+
+
+<section id="patterns" class="container">
+
+  <div class="section-heading">
+
+    <span>Latest Inspiration</span>
+
+    <h2>Featured Crochet Patterns</h2>
+
+    <p>
+      Easy-to-follow crochet projects and creative handmade inspiration.
+    </p>
+
+  </div>
+
+
+  <div class="posts">
+
+
+    <article class="post-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1603481546238-487240415921?auto=format&fit=crop&w=900&q=80"
+        alt="Crochet granny square pattern"
+      >
+
+      <div class="post-content">
+
+        <div class="post-category">
+          Granny Squares
+        </div>
+
+        <h3>
+          Easy Granny Square Crochet Pattern
+        </h3>
+
+        <p>
+          Learn how to make a beautiful classic granny square
+          with an easy step-by-step pattern.
+        </p>
+
+        <a class="read-more" href="#">
+          View Pattern →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <article class="post-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1615486363973-f79d875780cf?auto=format&fit=crop&w=900&q=80"
+        alt="Crochet blanket"
+      >
+
+      <div class="post-content">
+
+        <div class="post-category">
+          Crochet Blankets
+        </div>
+
+        <h3>
+          Cozy Beginner Crochet Blanket
+        </h3>
+
+        <p>
+          Create a soft and cozy crochet blanket using
+          simple stitches perfect for beginners.
+        </p>
+
+        <a class="read-more" href="#">
+          View Pattern →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <article class="post-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=900&q=80"
+        alt="Crochet yarn project"
+      >
+
+      <div class="post-content">
+
+        <div class="post-category">
+          Easy Crochet
+        </div>
+
+        <h3>
+          Simple Weekend Crochet Project
+        </h3>
+
+        <p>
+          Looking for something quick to crochet?
+          Try this relaxing beginner-friendly project.
+        </p>
+
+        <a class="read-more" href="#">
+          View Pattern →
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+<section class="intro">
+
+  <div class="intro-wrap">
+
+    <h2>
+      Welcome to The Crochet Corner
+    </h2>
+
+    <p>
+      A cozy place for crochet lovers to discover beautiful patterns,
+      creative ideas and handmade inspiration. Whether you're just
+      learning to crochet or have been stitching for years, you'll
+      find projects designed to inspire your next creation.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="newsletter">
+
+  <h2>
+    Never Miss a New Pattern
+  </h2>
+
+  <p>
+    Get fresh crochet inspiration and free pattern ideas.
+  </p>
+
+  <div class="newsletter-form">
+
+    <input
+      type="email"
+      placeholder="Enter your email address"
+    >
+
+    <button>
+      Subscribe
+    </button>
+
+  </div>
+
+</section>
+
 
 <footer>
-  © 2026 Free Crochet Patterns
+
+  <div class="footer-logo">
+    The Crochet Corner
+  </div>
+
+  <p>
+    Free crochet patterns & handmade inspiration.
+  </p>
+
+  <p>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Privacy</a>
+  </p>
+
+  <p>
+    © 2026 The Crochet Corner. All rights reserved.
+  </p>
+
 </footer>
+
 
 </body>
 </html>
